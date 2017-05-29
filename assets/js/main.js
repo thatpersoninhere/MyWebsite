@@ -106,8 +106,7 @@
 		// Parallax background.
 
 			// Disable parallax on IE (smooth scrolling is jerky), and on mobile platforms (= better performance).
-				if (skel.vars.browser == 'ie'
-				||	skel.vars.mobile)
+				if (skel.vars.browser == 'ie' || skel.vars.mobile)
 					settings.parallax = false;
 
 			if (settings.parallax) {
@@ -124,9 +123,7 @@
 					.on('resize.overflow_parallax', function() {
 
 						// If we're in a situation where we need to temporarily disable parallax, do so.
-							if (!skel.breakpoint('wide').active
-							||	skel.breakpoint('narrow').active) {
-
+							if (!skel.breakpoint('wide').active || skel.breakpoint('narrow').active) {
 								$body.css('background-position', '');
 								$bg = $dummy;
 
